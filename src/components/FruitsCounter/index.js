@@ -8,13 +8,17 @@ class FruitsCounter extends Component {
     bananaCount: 0,
   }
 
-  onClickMango = () => {
-    this.setState(prevState => ({mangoCount: prevState.mangoCount + 1}))
+  clickMango = () => {
+    this.setState(prevState => ({
+      mangoCount: prevState.mangoCount + 1,
+    }))
+  }
+  clickBanana = () => {
+    this.setState(prevState => ({
+      mangoCount: prevState.mangoCount + 1,
+    }))
   }
 
-  onClickBanana = () => {
-    this.setState(prevState => ({mangoCount: prevState.bananaCount + 1}))
-  }
   render() {
     const {mangoCount, bananaCount} = this.state
 
@@ -32,7 +36,8 @@ class FruitsCounter extends Component {
                 alt="Mango"
                 src="https://assets.ccbp.in/frontend/react-js/mango-img.png"
               />
-              <button onClick={this.onClickMango} className="button">
+
+              <button className="button" onClick={this.clickMango}>
                 Eat Mango
               </button>
             </div>
@@ -42,7 +47,7 @@ class FruitsCounter extends Component {
                 alt="Banana"
                 src="https://assets.ccbp.in/frontend/react-js/banana-img.png"
               />
-              <button onClick={this.onClickBanana} className="button">
+              <button className="button" onClick={this.clickBanana}>
                 Eat Banana
               </button>
             </div>
